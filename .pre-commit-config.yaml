@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        exclude: images/screenshot.gif
+  - repo: local
+    hooks:
+    - id: lychee
+      name: Check URLs with lychee
+      entry: lychee
+      args: ["--no-progress"]
+      language: system
+      types: [text]
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.39.0
+    hooks:
+      - id: markdownlint
+        args: []
+        files: \.(md|markdown)$
+        exclude: LICENSE
+  - repo: https://github.com/psf/black
+    rev: "24.2.0"
+    hooks:
+      - id: black
+        language_version: python3.10

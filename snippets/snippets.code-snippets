@@ -1,0 +1,335 @@
+{
+  "hook": {
+    "scope": "yaml",
+    "prefix": "pre-commit-hook",
+    "body": [
+      "# See https://pre-commit.com for more information",
+      "# See https://pre-commit.com/hooks.html for more hooks",
+      "repos:",
+      "  - repo: https://github.com/pre-commit/pre-commit-hooks",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: trailing-whitespace",
+      "      - id: end-of-file-fixer",
+      "      - id: check-yaml",
+      "      - id: check-added-large-files"
+    ],
+    "description": "Code snippet for pre-commit hooks."
+  },
+  "advanced-hook": {
+    "scope": "yaml",
+    "prefix": "pre-commit-advanced-hook",
+    "body": [
+      "# See https://pre-commit.com for more information",
+      "# See https://pre-commit.com/hooks.html for more hooks",
+      "repos:",
+      "  - repo: https://github.com/pre-commit/pre-commit-hooks",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: trailing-whitespace",
+      "      - id: end-of-file-fixer",
+      "      - id: check-added-large-files",
+      "      - id: check-merge-conflict",
+      "      - id: check-yaml",
+      "      - id: check-json",
+      "      - id: check-xml",
+      "      - id: check-toml"
+    ]
+  },
+  "config-files": {
+    "scope": "yaml",
+    "prefix": "pre-commit-config-files",
+    "body": [
+      "repos:",
+      "  - repo: https://github.com/pre-commit/pre-commit-hooks",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: trailing-whitespace",
+      "      - id: end-of-file-fixer",
+      "      - id: check-yaml",
+      "      - id: check-json",
+      "      - id: check-xml",
+      "      - id: check-toml"
+    ]
+  },
+  "no-commit-to-branch": {
+    "scope": "yaml",
+    "prefix": "pre-commit-no-commit-to-branch",
+    "body": [
+      "repos:",
+      "  - repo: https://github.com/pre-commit/pre-commit-hooks",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: no-commit-to-branch",
+      "        args: ['--branch', '${2:main}']"
+    ],
+    "description": "Code snippet for \"no-commit-to-branch\" in pre-commit."
+  },
+  "prettier": {
+    "scope": "yaml",
+    "prefix": "pre-commit-prettier",
+    "body": [
+      "  - repo: https://github.com/pre-commit/mirrors-prettier",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: prettier",
+      "        args: ${2:['--write']}",
+      "        additional_dependencies: ${3:['prettier@2.4.1', 'prettier-plugin-packagejson@2.4.1']}",
+      "        types_or: ${4:['*.js', '*.ts', '*.css', '*.json', '*.md', '*.yml', '*.yaml']}"
+    ],
+    "description": "Code snippet for \"prettier\" in pre-commit."
+  },
+  "css": {
+    "scope": "yaml",
+    "prefix": "pre-commit-css",
+    "body": [
+      "  - repo: https://github.com/pre-commit/mirrors-csslint",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: csslint",
+      "        args: ${2:['--quiet']}"
+    ],
+    "description": "Code snippet for \"csslint\" in pre-commit."
+  },
+  "black": {
+    "scope": "yaml",
+    "prefix": "pre-commit-black",
+    "body": [
+      "  - repo: https://github.com/psf/black",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: black",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"black\" in pre-commit."
+  },
+  "black-jupyter": {
+    "scope": "yaml",
+    "prefix": "pre-commit-black-jupyter",
+    "body": [
+      "  - repo: https://github.com/psf/black",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: black-jupyter",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"black\" in pre-commit."
+  },
+  "isort": {
+    "scope": "yaml",
+    "prefix": "pre-commit-isort",
+    "body": [
+      "  - repo: https://github.com/pycqa/isort",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: isort",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"isort\" in pre-commit."
+  },
+  "mypy": {
+    "scope": "yaml",
+    "prefix": "pre-commit-mypy",
+    "body": [
+      "  - repo: https://github.com/pre-commit/mirrors-mypy",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: mypy",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+      "        args: ${3:[]}",
+      "        additional_dependencies: ${4:[]}"
+    ],
+    "description": "Code snippet for \"mypy\" in pre-commit."
+  },
+  "bandit": {
+    "scope": "yaml",
+    "prefix": "pre-commit-bandit",
+    "body": [
+      "  - repo: https://github.com/PyCQA/bandit",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: bandit",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"bandit\" in pre-commit."
+  },
+  "pyupgrade": {
+    "scope": "yaml",
+    "prefix": "pre-commit-pyupgrade",
+    "body": [
+      "  - repo: https://github.com/asottile/pyupgrade",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: pyupgrade",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+      "        args: ${3:[]}"
+    ],
+    "description": "Code snippet for \"pyupgrade\" in pre-commit."
+  },
+  "ruff": {
+    "scope": "yaml",
+    "prefix": "pre-commit-ruff",
+    "body": [
+      "  - repo: https://github.com/astral-sh/ruff-pre-commit",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: ruff",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+      "        args: ${3:[]}",
+      "        types_or: ${4:[ python, pyi, jupyter ]}",
+      "      - id: ruff-format",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+      "        args: ${5:[]}"
+    ],
+    "description": "Code snippet for \"ruff\" and \"ruff-format\" in pre-commit."
+  },
+  "flake8": {
+    "scope": "yaml",
+    "prefix": "pre-commit-flake8",
+    "body": [
+      "  - repo: https://github.com/pycqa/flake8",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: flake8",
+      "        language_version: ${2|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+      "        args: ${3:[]}",
+      "        additional_dependencies: ${4:[]}"
+    ],
+    "description": "Code snippet for \"flake8\" in pre-commit."
+  },
+  "eslint": {
+    "scope": "yaml",
+    "prefix": "pre-commit-eslint",
+    "body": [
+      "  - repo: https://github.com/pre-commit/mirrors-eslint",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: eslint",
+      "        args: ${2:[]}",
+      "        additional_dependencies:",
+      "          - ${3:\"eslint@4.15.0\"}",
+      "          - ${4:\"eslint-config-google@0.7.1\"}",
+      "          - ${5:\"eslint-loader@1.6.1\"}",
+      "          - ${6:\"eslint-plugin-react@6.10.3\"}",
+      "          - ${7:\"babel-eslint@6.1.2\"}",
+      "        files: ${8:\\.[jt]sx?$}"
+    ],
+    "description": "Code snippet for \"eslint\" in pre-commit."
+  },
+  "markdownlint": {
+    "scope": "yaml",
+    "prefix": "pre-commit-markdownlint",
+    "body": [
+      "  - repo: https://github.com/markdownlint/markdownlint",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: markdownlint"
+    ],
+    "description": "Code snippet for \"markdownlint\" in pre-commit."
+  },
+  "pygrep-hooks": {
+    "scope": "yaml",
+    "prefix": "pre-commit-pygrep-hooks",
+    "body": [
+      "  - repo: https://github.com/pre-commit/pygrep-hooks",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: ${2:hook_id}",
+      "        language_version: ${3|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"pygrep-hooks\" in pre-commit."
+  },
+  "shellcheck": {
+    "scope": "yaml",
+    "prefix": "pre-commit-shellcheck",
+    "body": [
+      "  - repo: https://github.com/shellcheck-py/shellcheck-py",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: shellcheck",
+      "        args:",
+      "          - ${2:--color=always}",
+      "          - ${3:-e}",
+      "          - ${4:SC1091}"
+    ],
+    "description": "Code snippet for \"shellcheck\" in pre-commit."
+  },
+  "cspell": {
+    "scope": "yaml",
+    "prefix": "pre-commit-cspell",
+    "body": [
+      "  - repo: https://github.com/streetsidesoftware/cspell-cli",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: cspell",
+      "        name: Spell check with cspell",
+      "        exclude: >",
+      "          (?x)^(",
+      "            .vscode/settings.json|",
+      "            .github/.*|",
+      "            CHANGELOG.md|",
+      "          )$"
+    ],
+    "description": "Code snippet for \"cspell\" in pre-commit."
+  },
+  "markdownlint-cli": {
+    "scope": "yaml",
+    "prefix": "pre-commit-markdownlint-cli",
+    "body": [
+      "  - repo: https://github.com/igorshubovych/markdownlint-cli",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: markdownlint",
+      "        args: ${2:[]}",
+      "        files: ${3:\\.(md|markdown)$}"
+    ],
+    "description": "Code snippet for \"markdownlint\" in pre-commit."
+  },
+  "ansible-lint": {
+    "scope": "yaml",
+    "prefix": "pre-commit-ansible-lint",
+    "body": [
+      "  - repo: https://github.com/ansible/ansible-lint",
+      "    rev: ${1:\"\"}",
+      "    hooks:",
+      "      - id: ansible-lint",
+      "        args: ${2:[]}",
+      "        language_version: ${3|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+    ],
+    "description": "Code snippet for \"ansible-lint\" in pre-commit."
+  },
+    "yamllint": {
+        "scope": "yaml",
+        "prefix": "pre-commit-yamllint",
+        "body": [
+            "  - repo: https://github.com/adrienverge/yamllint.git",
+            "    rev: ${1:\"\"}",
+            "    hooks:",
+            "      - id: yamllint",
+            "        files: \\.(${2|yaml,yml,yml\\|yaml|})$",
+            "        types: [file, yaml]",
+            "        entry: yamllint --strict",
+            "        language_version: ${3|python3.10,python3.8,python3.9,python3.11,python3.12|}"
+        ],
+        "description": "Code snippet for \"yamllint\" in pre-commit."
+    },
+      "codespell": {
+        "scope": "yaml",
+        "prefix": "pre-commit-codespell",
+        "body": [
+          "  - repo: https://github.com/codespell-project/codespell",
+          "    rev: ${1:\"\"}",
+          "    hooks:",
+          "      - id: codespell",
+          "        exclude: >-",
+          "          (?x)^(",
+          "            .vscode/.*|",
+          "            .github/.*|",
+          "          )$",
+          "        args: ${2:[-w, --ignore-words-list=${3:ignore-words.txt}]}",
+          "        language_version: ${4|python3.10,python3.8,python3.9,python3.11,python3.12|}",
+          "        additional_dependencies: ${5:[tomli]}"
+        ],
+        "description": "Code snippet for \"codespell\" in pre-commit."
+      }
+    }

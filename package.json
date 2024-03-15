@@ -1,0 +1,31 @@
+{
+  "name": "pre-commit-snippets",
+  "displayName": "pre-commit Snippets",
+  "description": "A snippet collection to set up your pre-commit config",
+  "version": "0.0.1",
+  "publisher": "AnselmHahn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anselmoo/pre-commit-snippets"
+  },
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "icon": "images/icon.jpeg",
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "pre-commit",
+    "snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "yaml",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
