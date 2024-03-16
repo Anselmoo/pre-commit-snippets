@@ -2,15 +2,9 @@ name: Lint snippets
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - '.vscode/snippets.code-snippets'
+    branches: ["*"]
   pull_request:
-    branches:
-      - main
-    paths:
-      - '.vscode/snippets.code-snippets'
+    branches: ["main"]
 
 jobs:
   lint:
