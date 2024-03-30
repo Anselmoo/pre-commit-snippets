@@ -9,14 +9,16 @@ The "pre-commit Snippets" extension includes snippets for a variety of
 pre-commit hooks, including:
 
 <!-- markdownlint-disable MD013 -->
-|                                                              |                                                                       |                                                                |                                                                       |
-| :----------------------------------------------------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------- | :-------------------------------------------------------------------- |
-| [ansible-lint](https://github.com/ansible/ansible-lint)      | [bandit](https://github.com/PyCQA/bandit)                             | [black](https://github.com/psf/black)                          | [black-jupyter](https://github.com/psf/black)                         |
-| [codespell](https://github.com/codespell-project/codespell)  | [config-files](https://github.com/pre-commit/pre-commit-hooks)        | [css](https://github.com/pre-commit/mirrors-csslint)           | [eslint](https://github.com/pre-commit/mirrors-eslint)                |
-| [flake8](https://github.com/pycqa/flake8)                    | [hook](https://github.com/pre-commit/pre-commit-hooks)                | [isort](https://github.com/pycqa/isort)                        | [markdownlint](https://github.com/markdownlint/markdownlint)          |
-| [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) | [mypy](https://github.com/pre-commit/mirrors-mypy)                    | [no-commit-to-branch](https://github.com/pre-commit/pre-commit-hooks) | [prettier](https://github.com/pre-commit/mirrors-prettier)            |
-| [pygrep-hooks](https://github.com/pre-commit/pygrep-hooks)    | [pyupgrade](https://github.com/asottile/pyupgrade)                    | [ruff](https://github.com/astral-sh/ruff-pre-commit)           | [shellcheck](https://github.com/shellcheck-py/shellcheck-py)          |
-| [yamllint](https://github.com/adrienverge/yamllint.git)      |                                                                       |                                                                |                                                                       |
+
+|                                                                       |                                                                |                                                                       |                                                              |
+| :-------------------------------------------------------------------- | :------------------------------------------------------------- | :-------------------------------------------------------------------- | :----------------------------------------------------------- |
+| [ansible-lint](https://github.com/ansible/ansible-lint)               | [bandit](https://github.com/PyCQA/bandit)                      | [black](https://github.com/psf/black)                                 | [black-jupyter](https://github.com/psf/black)                |
+| [codespell](https://github.com/codespell-project/codespell)           | [config-files](https://github.com/pre-commit/pre-commit-hooks) | [css](https://github.com/pre-commit/mirrors-csslint)                  | [eslint](https://github.com/pre-commit/mirrors-eslint)       |
+| [flake8](https://github.com/pycqa/flake8)                             | [hook](https://github.com/pre-commit/pre-commit-hooks)         | [isort](https://github.com/pycqa/isort)                               | [markdownlint](https://github.com/markdownlint/markdownlint) |
+| [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) | [mypy](https://github.com/pre-commit/mirrors-mypy)             | [no-commit-to-branch](https://github.com/pre-commit/pre-commit-hooks) | [prettier](https://github.com/pre-commit/mirrors-prettier)   |
+| [pygrep-hooks](https://github.com/pre-commit/pygrep-hooks)            | [pyupgrade](https://github.com/asottile/pyupgrade)             | [ruff](https://github.com/astral-sh/ruff-pre-commit)                  | [shellcheck](https://github.com/shellcheck-py/shellcheck-py) |
+| [yamllint](https://github.com/adrienverge/yamllint.git)               |                                                                |                                                                       |                                                              |
+
 <!-- markdownlint-enable MD013 -->
 
 To use a snippet, simply start typing the name of the hook in your
