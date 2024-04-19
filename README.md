@@ -39,6 +39,10 @@ on the [issue tracker](https://github.com/Anselmoo/pre-commit-snippets/issues).
 
 ## Release Notes
 
+### 0.0.2
+
+Add [ruff-format](https://docs.astral.sh/ruff/formatter/) hook to pre-commit.
+
 ### 0.0.1
 
 Initial release of pre-commit Snippets.
