@@ -2,7 +2,7 @@
   "name": "pre-commit-snippets",
   "displayName": "pre-commit Snippets",
   "description": "A snippet collection to set up your pre-commit config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "AnselmHahn",
   "license": "MIT",
   "repository": {
